@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <!-- <link rel="stylesheet" href="../css/oder.css" /> -->
+    <link rel="stylesheet" href="css/media.css" />
+
+    <title>Айну</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-elems">
+          <div class="header-elems__logo">
+            <a href="index.html" class="logo">
+              <img src="assets/logo.svg" alt="Логотип" />
+            </a>
+          </div>
+          <div class="header-elems__cat">
+            <button class="button button-cat">
+              <svg class="icon_burger">
+                <use xlink:href="assets/icons.svg#burger"></use>
+              </svg>
+              Каталог
+            </button>
+          </div>
+          <div class="header-elems__search">
+            <svg class="icon-search">
+              <use xlink:href="assets/icons.svg#search"></use>
+            </svg>
+            <input type="text" placeholder="Поиск" />
+            <button class="button button-find" type="submit">Найти</button>
+          </div>
+
+          <nav >
+            <ul class="header-elems__promo">
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#bonus"></use>
+              </svg>
+              <div class="promo-item__text">Бонусы</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#oder"></use>
+              </svg>
+              <div class="promo-item__text">Заказы</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#promotions"></use>
+              </svg>
+              <div class="promo-item__text">Акции</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#basket"></use>
+              </svg>
+              <div class="promo-item__text">Корзина(5)</div>
+            </li>
+            </ul>
+          </nav>
+          <button class="button button-promo-burger">
+            <svg class="icon_burger">
+              <use xlink:href="assets/icons.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="bread-crumbs">
+      <div class="container">
+        <ul class="bread-crumbs__list">
+          <li>Каталог товаров</li>
+          <li>Собачки</li>
+          <li>Айну</li>
+        </ul>
+        <h1 class="bread-crumbs__title">Айну</h1>
+      </div>
+    </div>
+  
+    <section class="cards">
+      <div class="container">
+        <div class="card">
+          <div class="card-item__img">
+            <img src="assets/image.jpeg" alt="Картинка собаки" />
+          </div>
+          <div class="card-options">
+            <h3 class="card-optins__title">Характеристика Айну</h3>
+            <div class="card-optins-items">
+              <div class="card-optins-item">
+                <span class="card-optins-item__title">Тип</span>
+                <span class="card-optins-item__value">Охотничьи, Компаньоны</span>
+              </div>
+              <div class="card-optins-item">
+                <span class="card-optins-item__title">Размер</span>
+                <span class="card-optins-item__value">Средняя (11-25кг)</span>
+              </div>
+              <div class="card-optins-item">
+                <span class="card-optins-item__title">Основные черты</span>
+                <p class="card-optins-item__value">
+                  Очень преданная, Дружелюбная, Подходит для охоты, Мало лает
+                </p>
+              </div>
+              <div class="card-optins-item">
+                <span class="card-optins-item__title">Частые заболевания</span>
+                <span class="card-optins-item__value">Глухота, Паралич гортани</span>
+              </div>
+              <div class="card-optins-item">
+                <span class="card-optins-item__title">Интеллект</span>
+                <span class="card-optins-item__value">45%</span>
+              </div>
+            </div>
+            <div class="card-options-price">
+              <p class="card-options-price__title">Стоимость</p>
+              <span class="card-options-price__value">12 000₽</span>
+            </div>
+            <div class="card-options-buttons">
+              <button class="button">Забрать</button>
+              <button class="button card-options_button">
+                Добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

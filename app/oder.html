@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/oder.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Оформление заказа</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-elems">
+          <div class="header-elems__logo">
+            <a href="index.html" class="logo"
+              ><img src="assets/logo.svg" alt="Логотип"
+            /></a>
+          </div>
+          <div class="header-elems__cat">
+            <button class="button button-cat">
+              <svg class="icon_burger">
+                <use xlink:href="assets/icons.svg#burger"></use>
+              </svg>
+              Каталог
+            </button>
+          </div>
+          <div class="header-elems__search">
+            <svg class="icon-search">
+              <use xlink:href="assets/icons.svg#search"></use>
+            </svg>
+            <input type="text" placeholder="Поиск" />
+            <button class="button button-find" type="submit">Найти</button>
+          </div>
+
+          <nav >
+            <ul class="header-elems__promo">
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#bonus"></use>
+              </svg>
+              <div class="promo-item__text">Бонусы</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#oder"></use>
+              </svg>
+              <div class="promo-item__text">Заказы</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#promotions"></use>
+              </svg>
+              <div class="promo-item__text">Акции</div>
+            </li>
+            <li class="promo-item">
+              <svg class="icon">
+                <use xlink:href="assets/icons.svg#basket"></use>
+              </svg>
+              <div class="promo-item__text">Корзина(5)</div>
+            </li>
+            </ul>
+          </nav>
+          <button class="button button-promo-burger">
+            <svg class="icon_burger">
+              <use xlink:href="assets/icons.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="bread-crumbs">
+      <div class="container">
+        <ul class="bread-crumbs__list">
+          <li>Каталог товаров</li>
+          <li>Оформление заказа</li>
+        </ul>
+        <h1 class="bread-crumbs__title">Оформление заказа</h1>
+      </div>
+    </div>
+ 
+
+    <div class="main-oder">
+      <div class="container">
+        <form action="#" class="main-oder" method="GET">
+          <div class="main-oder__contacts">
+            <h2 class="main-oder__title">Получатель</h2>
+            <div class="main-oder__contact">
+              <label for="oder-ct">Имя</label>
+              <input
+                class="input-oder"
+                type="text"
+                id="oder-ct"
+                placeholder="Владимир"
+              />
+            </div>
+            <div class="main-oder__contact">
+              <label for="oder-ct2">Телефон</label>
+              <input
+                class="input-oder"
+                type="tel"
+                id="oder-ct2"
+                placeholder="+0 000-000-00-00"
+              />
+            </div>
+          </div>
+
+          <div class="main-oder__delivery">
+            <h2 class="main-oder__title">Способ доставки</h2>
+            <div class="delivery-items">
+              <input type="radio" id="oder-rad" name="oder-radio" checked />
+              <label for="oder-rad">Самовывоз</label>
+            </div>
+            <div class="delivery-items">
+              <input type="radio" id="oder-rad2" name="oder-radio" />
+              <label for="oder-rad2">Курьер</label>
+            </div>
+          </div>
+
+          <div class="main-oder__basket">
+            <h2 class="main-oder__title">2 товара на сумму 27 000₽</h2>
+            <ul class="oder-basket-items">
+              <li class="oder-basket-item">
+                <div class="oder-item__img">
+                  <img src="assets/image.jpeg" alt="Картинка собаки" />
+                </div>
+                <div class="oder-basket-item__name">
+                  <h3 class="main-items__title">Айну</h3>
+                </div>
+                <div class="oder-basket-item__count">1 шт.</div>
+                <div class="basket-price">12 000₽</div>
+              </li> 
+              <li class="oder-basket-item">
+                <div class="oder-item__img">
+                  <img src="assets/image1.jpeg" alt="Картинка собаки" />
+                </div>
+                <div class="oder-basket-item__name">
+                  <h3 class="main-items__title">Афганская борзая</h3>
+                </div>
+                <div class="oder-basket-item__count">1 шт.</div>
+                <div class="basket-price">15 000₽</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="main-oder__total">
+            <div class="total-items">
+              <div class="total-item">
+                <span class="total-text">Сумма заказа</span>
+                <span class="total-summ">27 000₽</span>
+              </div>
+        
+              <div class="total-item">
+                <span class="total-text">Самовывоз</span>
+                <span class="total-summ">0₽</span>
+              </div>
+       
+              <div class="total-item-all">
+                <span class="total-text-all">Итого с доставкой</span>
+                <span class="total-all">27 000₽ </span>
+              </div>
+              <div class="button-oder">
+                <button class="button" type="submit">Создать заказ</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

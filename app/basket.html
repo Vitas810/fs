@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/basket.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Basket</title>
+  </head>
+  <body>
+    <div class="basket">
+      <h1 class="basket__title">Ваша корзина</h1>
+      <button class="basket-clouse"></button>
+      <div class="basket-all">
+        <div class="basket-all__select filter-checkbox-other">
+          <input type="checkbox" id="basket-all" />
+          <label for="basket-all"> Выбрать всё </label>
+        </div>
+        <button class="basket-all__delete" type="submit">
+          Удалить всё
+          <svg class="icon_delete_basket">
+            <use xlink:href="assets/icons.svg#delete_basket"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="basket-items">
+        <li class="basket-item">
+          <div class="basket-item__checkbox filter-checkbox-other">
+            <input type="checkbox" id="basket-checkbox1" />
+            <label for="basket-checkbox1"></label>
+          </div>
+          <div class="basket-item__img">
+            <img src="assets/image.jpeg" alt="image" />
+          </div>
+          <div class="basket-item__name">Айну</div>
+          <div class="basket-item__buttons">
+            <button class="basket-item__button">-</button>
+            <output class="basket-item__result">1</output>
+            <button class="basket-item__button">+</button>
+          </div>
+          <div class="basket-item__price">12 000₽</div>
+          <button class="basket-btn-remove">
+            <svg class="icon_delete_basket">
+              <use xlink:href="assets/icons.svg#delete_basket"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="basket-item">
+          <div class="basket-item__checkbox filter-checkbox-other">
+            <input type="checkbox" id="basket-checkbox2" />
+            <label for="basket-checkbox2"></label>
+          </div>
+          <div class="basket-item__img">
+            <img src="assets/image1.jpeg" alt="image" />
+          </div>
+          <div class="basket-item__name">Афганская борзая</div>
+          <div class="basket-item__buttons">
+            <button class="basket-item__button">-</button>
+            <output class="basket-item__result">1</output>
+            <button class="basket-item__button">+</button>
+          </div>
+          <div class="basket-item__price">15 000₽</div>
+          <button class="basket-btn-remove">
+            <svg class="icon_delete_basket">
+              <use xlink:href="assets/icons.svg#delete_basket"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <p class="basket-item-results">
+        2 товара на сумму <span class="results_price">27 000₽</span>
+      </p>
+      <button class="button basket-btn-do">Оформить заказ</button>
+    </div>
+  </body>
+</html>
