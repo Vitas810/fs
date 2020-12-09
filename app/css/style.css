@@ -126,13 +126,13 @@ input:active,
   vertical-align: top;
   outline: none;
   transition: background 0.3s ease;
-  background: url('../img/mark.svg') 0 0 no-repeat;
+  background: url('../assets/mark.svg') 0 0 no-repeat;
   cursor: pointer;
 }
 
 /* Checked */
 .filter-checkbox-other input[type='checkbox']:checked {
-  background-image: url('../img/mark-checked.svg');
+  background-image: url('../assets/mark-checked.svg');
 }
 /* Focus */
 .focused input[type='checkbox'] {
@@ -337,13 +337,13 @@ header {
 }
 
 .dog {
-  background-image: url('../img/bg-catalog-dog.svg');
+  background-image: url('../assets/bg-catalog-dog.svg');
   background-size: cover;
   background-color: #fbba3c;
   background-blend-mode: color-dodge;
 }
 .cat {
-  background-image: url('../img/bg-catalog-cat.svg');
+  background-image: url('../assets/bg-catalog-cat.svg');
   background-size: cover;
   background-color: #e95342;
   background-blend-mode: color-dodge;
