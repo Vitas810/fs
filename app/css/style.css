@@ -104,6 +104,13 @@ input:active,
   margin-top: 19px;
   margin-left: 16px;
 }
+.filter-counter-elem {
+  display: none;
+  background-color: var(--white);
+  padding: 8px;
+  position: absolute;
+}
+
 .button-filter-mobail {
   font-weight: 500;
   font-size: 16px;
@@ -271,7 +278,7 @@ header {
   padding: 14px 32px;
 }
 /* ----------------bread-crumbs ------------------*/
-.bread-crumbs{
+.bread-crumbs {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .bread-crumbs.novisible {
@@ -503,7 +510,6 @@ header {
   margin-top: 42px;
   display: flex;
   justify-content: center;
- 
 }
 .main-button__btn {
   padding: 10px 16px;

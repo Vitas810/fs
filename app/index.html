@@ -38,32 +38,32 @@
             <button class="button button-find" type="submit">Найти</button>
           </div>
 
-          <nav >
+          <nav>
             <ul class="header-elems__promo">
-            <li class="promo-item">
-              <svg class="icon">
-                <use xlink:href="assets/icons.svg#bonus"></use>
-              </svg>
-              <a href="#" class="promo-item__text">Бонусы</a>
-            </li>
-            <li class="promo-item">
-              <svg class="icon">
-                <use xlink:href="assets/icons.svg#oder"></use>
-              </svg>
-              <a href="#" class="promo-item__text">Заказы</a>
-            </li>
-            <li class="promo-item">
-              <svg class="icon">
-                <use xlink:href="assets/icons.svg#promotions"></use>
-              </svg>
-              <a href="#" class="promo-item__text">Акции</a>
-            </li>
-            <li class="promo-item">
-              <svg class="icon">
-                <use xlink:href="assets/icons.svg#basket"></use>
-              </svg>
-              <a href="#" class="promo-item__text">Корзина(5)</a>
-            </li>
+              <li class="promo-item">
+                <svg class="icon">
+                  <use xlink:href="assets/icons.svg#bonus"></use>
+                </svg>
+                <a href="#" class="promo-item__text">Бонусы</a>
+              </li>
+              <li class="promo-item">
+                <svg class="icon">
+                  <use xlink:href="assets/icons.svg#oder"></use>
+                </svg>
+                <a href="#" class="promo-item__text">Заказы</a>
+              </li>
+              <li class="promo-item">
+                <svg class="icon">
+                  <use xlink:href="assets/icons.svg#promotions"></use>
+                </svg>
+                <a href="#" class="promo-item__text">Акции</a>
+              </li>
+              <li class="promo-item">
+                <svg class="icon">
+                  <use xlink:href="assets/icons.svg#basket"></use>
+                </svg>
+                <a href="#" class="promo-item__text">Корзина(5)</a>
+              </li>
             </ul>
           </nav>
           <button class="button button-promo-burger">
@@ -86,14 +86,14 @@
     <div class="line"></div>
 
     <div class="catalog-top">
-        <div class="catalog-items">
-          <div class="catalog-top__item dog">
-            <a href="#">Собачки</a>
-          </div>
-          <div class="catalog-top__item cat">
-            <a href="#">Котики</a>
-          </div>
+      <div class="catalog-items">
+        <div class="catalog-top__item dog">
+          <a href="#">Собачки</a>
         </div>
+        <div class="catalog-top__item cat">
+          <a href="#">Котики</a>
+        </div>
+      </div>
     </div>
     <div class="filter-mobile">
       <div class="container">
@@ -166,7 +166,12 @@
                 <label for="main-traits4">Хорошее послушание</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="main-traits5" name="main-traits" />
+                <input
+                  class="ch"
+                  type="checkbox"
+                  id="main-traits5"
+                  name="main-traits"
+                />
                 <label for="main-traits5">Очень преданная</label>
               </div>
 
@@ -189,9 +194,14 @@
             </div>
           </div>
         </form>
+
+        <div class="filter-counter-elem">
+          <span>Найдена 1 позиция</span>
+          <a href="#">Показать</a>
+        </div>
       </aside>
       <main class="item">
-        <ul class="main-items">        
+        <ul class="main-items">
           <template id="cardProduct">
             <li class="main-item">
               <div class="main-item__img">
