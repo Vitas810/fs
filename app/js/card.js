@@ -330,24 +330,16 @@ xmlHTTP.onload = function (ev) {
       mainCard.querySelector('.types_title1').textContent = element.typeName;
       mainCard.querySelector('.types_value1').textContent = arrayTypes;
       mainCard.querySelector('.types_title2').textContent = element.sizeName;
-      mainCard.querySelector('.types_value2').textContent =
-        element.size + element.kg;
+      mainCard.querySelector('.types_value2').textContent = element.size + element.kg;
       mainCard.querySelector('.types_title3').textContent = element.mainName;
       mainCard.querySelector('.types_value3').textContent = arrayFeatures;
-      mainCard.querySelector('.types_title4').textContent =
-        element.frequentName;
-      mainCard.querySelector(
-        '.types_value4'
-      ).textContent = arrayFrequentIllnesses;
-      mainCard.querySelector('.types_title5').textContent =
-        element.intelligenceName;
-      mainCard.querySelector('.types_value5').textContent =
-        element.Intelligence;
+      mainCard.querySelector('.types_title4').textContent = element.frequentName;
+      mainCard.querySelector('.types_value4').textContent = arrayFrequentIllnesses;
+      mainCard.querySelector('.types_title5').textContent = element.intelligenceName;
+      mainCard.querySelector('.types_value5').textContent = element.Intelligence;
       mainCard.querySelector('.types_title6').textContent = element.priceName;
-      mainCard.querySelector('.types_value6').textContent =
-        element.priceCard + element.p;
-      mainCard.querySelector('.card-options_button').textContent =
-        element.btnAddCard;
+      mainCard.querySelector('.types_value6').textContent = element.priceCard + element.p;
+      mainCard.querySelector('.card-options_button').textContent = element.btnAddCard;
       mainCard.querySelector('.btn-take').textContent = element.btnTake;
       cardFragment.appendChild(mainCard);
     });
@@ -355,6 +347,8 @@ xmlHTTP.onload = function (ev) {
     list.appendChild(cardFragment);
   }
   createCards();
+
+ 
 };
 xmlHTTP.open('GET', 'http://localhost:3000/api/card.json', true);
 xmlHTTP.send();

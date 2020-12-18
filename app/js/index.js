@@ -2,25 +2,6 @@ let xmlHTTP = new XMLHttpRequest();
 xmlHTTP.onload = function (ev) {
   //console.log(ev.target.responseText);
   let allItems = JSON.parse(ev.target.responseText);
-  let randomItems = allItems.sort(() => Math.random() - 0.5);
-
-  function createItems() {
-    let cardFragment = document.createDocumentFragment();
-    let temlateItems = document.querySelector('#cardProduct');
-    randomItems.forEach((element) => {
-      const mainItem = temlateItems.content.cloneNode(true);
-      mainItem.querySelector('img').src = element.src;
-      mainItem.querySelector('img').alt = element.alt;
-      mainItem.querySelector('h3').textContent = element.title;
-      mainItem.querySelector('.main-items__price').textContent = element.price;
-      mainItem.querySelector('.main-items__button').textContent =
-        element.button;
-      cardFragment.appendChild(mainItem);
-    });
-    let list = document.querySelector('.main-items');
-    list.appendChild(cardFragment);
-  }
-  createItems();
 
   const cat = document.querySelector('.catalog-top');
   const button = document.querySelector('.button');
@@ -34,6 +15,27 @@ xmlHTTP.onload = function (ev) {
     line.classList.toggle('novisible');
     breadCrumbs.classList.toggle('novisible');
   });
+
+  let randomItems = allItems.sort(() => Math.random() - 0.5);
+
+  function createItems() {
+    let cardFragment = document.createDocumentFragment();
+    let temlateItems = document.querySelector('#cardProduct');
+    randomItems.forEach((element) => {
+      const mainItem = temlateItems.content.cloneNode(true);
+      mainItem.querySelector('img').src = element.src;
+      mainItem.querySelector('img').alt = element.alt;
+      mainItem.querySelector('h3').textContent = element.title;
+      mainItem.querySelector('.main-items__price').textContent = element.price;
+      mainItem.querySelector('.main-items__button').textContent = element.button;
+      cardFragment.appendChild(mainItem);
+    });
+    let list = document.querySelector('.main-items');
+    list.appendChild(cardFragment);
+  }
+  createItems();
+
+  /* ----------------------------filter begin----------------------- */
 
   /* TODO исправить всплывашку */
   const elementCounterClick = document.querySelectorAll(
@@ -76,10 +78,10 @@ xmlHTTP.onload = function (ev) {
     });
   }
 
-  /* const linkCard = document.querySelector('.item-block-link');
-linkCard.addEventListener('click', event => {
 
-}) */
+/* -----------------------------filter end----------- */
+
+
 };
 xmlHTTP.open('GET', 'http://localhost:3000/api/catalog.json', true);
 xmlHTTP.send();
