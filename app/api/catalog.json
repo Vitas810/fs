@@ -1,103 +1,101 @@
-{
-  "allItem": [
-    {
-      "title": "Легавой",
-      "price": 39000,
-      "src": "assets/image4.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Веттерхун",
-      "price": 12000,
-      "src": "assets/image5.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Английский Кокер",
-      "price": 8000,
-      "src": "assets/image10.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Барбет",
-      "price": 15000,
-      "src": "assets/image2.jpeg",
-      "alt": "image",
-      "button": "В корзину",
-      "typeValue": "Companions",
-      "traitsValue": "no_sense_fear"
-    },
-    {
-      "title": "Древера",
-      "price": 17000,
-      "src": "assets/image6.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Бассет",
-      "price": 10000,
-      "src": "assets/image3.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Афганская борзая",
-      "price": 15000,
-      "src": "assets/image1.jpeg",
-      "alt": "image",
-      "button": "В корзину",
-      "hunting": "hunting",
-      "companions": 1,
-      "decorative": 0
-    },
-    {
-      "title": "Амереканский кокер",
-      "price": 10000,
-      "src": "assets/image9.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Ирландский терьер",
-      "price": 15000,
-      "src": "assets/image7.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "title": "Дункер",
-      "price": 20000,
-      "src": "assets/image11.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    },
-    {
-      "id": 1,
-      "title": "Айну",
-      "price": 12000,
-      "src": "assets/image.jpeg",
-      "alt": "image",
-      "button": "В корзину",
-      "hunting": "hunting",
-      "companions": "",
-      "decorative": "",
-      "service": "",
-      "noSensefear": "noSensefear",
-      "littleSheds": "",
-      "excellentHealth": "",
-      "goodObedience": "",
-      "veryDevoted": ""
-    },
-    {
-      "title": "Спаниель",
-      "price": 5000,
-      "src": "assets/image12.jpeg",
-      "alt": "image",
-      "button": "В корзину"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "Айну",
+    "price": 12000,
+    "src": "assets/image.jpeg",
+    "alt": "image",
+    "button": "В корзину",
+    "hunting": "hunting",
+    "companions": "",
+    "decorative": "",
+    "service": "",
+    "noSensefear": "noSensefear",
+    "littleSheds": "",
+    "excellentHealth": "",
+    "goodObedience": "",
+    "veryDevoted": ""
+  },
+  {
+    "title": "Афганская борзая",
+    "price": 15000,
+    "src": "assets/image1.jpeg",
+    "alt": "image",
+    "button": "В корзину",
+    "hunting": "hunting",
+    "companions": 1,
+    "decorative": 0
+  },
+  {
+    "title": "Барбет",
+    "price": 15000,
+    "src": "assets/image2.jpeg",
+    "alt": "image",
+    "button": "В корзину",
+    "typeValue": "Companions",
+    "traitsValue": "no_sense_fear"
+  },
+  {
+    "title": "Бассет",
+    "price": 10000,
+    "src": "assets/image3.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Легавой",
+    "price": 39000,
+    "src": "assets/image4.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Веттерхун",
+    "price": 12000,
+    "src": "assets/image5.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Древера",
+    "price": 17000,
+    "src": "assets/image6.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Ирландский терьер",
+    "price": 15000,
+    "src": "assets/image7.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Амереканский кокер",
+    "price": 10000,
+    "src": "assets/image9.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Английский Кокер",
+    "price": 8000,
+    "src": "assets/image10.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Дункер",
+    "price": 20000,
+    "src": "assets/image11.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  },
+  {
+    "title": "Спаниель",
+    "price": 5000,
+    "src": "assets/image12.jpeg",
+    "alt": "image",
+    "button": "В корзину"
+  }
+]
