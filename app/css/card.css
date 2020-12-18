@@ -1,5 +1,5 @@
 .card-item__img {
-  width: 504px;
+  max-width: 504px;
   height: 401px;
 }
 .cards {

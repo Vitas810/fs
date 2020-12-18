@@ -118,19 +118,19 @@
                 </svg>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="type1" name="type" />
+                <input type="checkbox" id="type1" name="type" value="hunting" />
                 <label for="type1">Охотничьи</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="type2" name="type" />
+                <input type="checkbox" id="type2" name="type" value="companions"/>
                 <label for="type2">Компаньоны</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="type3" name="type" />
+                <input type="checkbox" id="type3" name="type" value="decorative"/>
                 <label for="type3">Декоративные</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="type4" name="type" />
+                <input type="checkbox" id="type4" name="type" value="service"/>
                 <label for="type4">Служебные</label>
               </div>
             </div>
@@ -150,28 +150,23 @@
               </div>
 
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="main-traits1" name="main-traits" />
+                <input type="checkbox" id="main-traits1" name="features" value="noSensefear" />
                 <label for="main-traits1">Отсутствует чувство страха</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="main-traits2" name="main-traits" />
+                <input type="checkbox" id="main-traits2" name="features" value="littleSheds"/>
                 <label for="main-traits2">Мало линяет</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="main-traits3" name="main-traits" />
+                <input type="checkbox" id="main-traits3" name="features" value="excellentHealth"/>
                 <label for="main-traits3">Отличное здоровье</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input type="checkbox" id="main-traits4" name="main-traits" />
+                <input type="checkbox" id="main-traits4" name="features" value="goodObedience"/>
                 <label for="main-traits4">Хорошее послушание</label>
               </div>
               <div class="filter-element__box filter-checkbox-other">
-                <input
-                  class="ch"
-                  type="checkbox"
-                  id="main-traits5"
-                  name="main-traits"
-                />
+                <input type="checkbox" id="main-traits5" name="features" value="veryDevoted"/>
                 <label for="main-traits5">Очень преданная</label>
               </div>
 
@@ -196,8 +191,8 @@
         </form>
 
         <div class="filter-counter-elem">
-          <span>Найдена 1 позиция</span>
-          <a href="#">Показать</a>
+          <span class="filter-counters"></span>
+          <a href="#" class="filter-show">Показать</a>
         </div>
       </aside>
       <main class="item">
@@ -208,7 +203,9 @@
                 <img src="" alt="" />
               </div>
               <div class="item-block">
-                <h3 class="main-items__title"></h3>
+                <a href="card.html" class="item-block-link" >
+                  <h3 class="main-items__title"></h3>
+                </a>
                 <span class="main-items__price"></span>
                 <button class="button main-items__button"></button>
               </div>
