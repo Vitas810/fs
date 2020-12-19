@@ -14,9 +14,11 @@
     "littleSheds": "",
     "excellentHealth": "",
     "goodObedience": "",
-    "veryDevoted": ""
+    "veryDevoted": "",
+    "href": "card.html"
   },
-  {
+  { 
+    "id": 2,
     "title": "Афганская борзая",
     "price": 15000,
     "src": "assets/image1.jpeg",
@@ -24,78 +26,99 @@
     "button": "В корзину",
     "hunting": "hunting",
     "companions": 1,
-    "decorative": 0
+    "decorative": 0,
+    "href": "card.html"
   },
   {
+    "id": 3,
     "title": "Барбет",
     "price": 15000,
     "src": "assets/image2.jpeg",
     "alt": "image",
     "button": "В корзину",
     "typeValue": "Companions",
-    "traitsValue": "no_sense_fear"
+    "traitsValue": "no_sense_fear",
+    "href": "card.html"
   },
   {
+    "id": 4,
     "title": "Бассет",
     "price": 10000,
     "src": "assets/image3.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 5,
     "title": "Легавой",
     "price": 39000,
     "src": "assets/image4.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 6,
     "title": "Веттерхун",
     "price": 12000,
     "src": "assets/image5.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 7,
     "title": "Древера",
     "price": 17000,
     "src": "assets/image6.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 8,
     "title": "Ирландский терьер",
     "price": 15000,
     "src": "assets/image7.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 9,
     "title": "Амереканский кокер",
     "price": 10000,
     "src": "assets/image9.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 10,
     "title": "Английский Кокер",
     "price": 8000,
     "src": "assets/image10.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 11,
     "title": "Дункер",
     "price": 20000,
     "src": "assets/image11.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   },
   {
+    "id": 12,
     "title": "Спаниель",
     "price": 5000,
     "src": "assets/image12.jpeg",
     "alt": "image",
-    "button": "В корзину"
+    "button": "В корзину",
+    "href": "card.html"
   }
 ]
