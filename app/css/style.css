@@ -278,9 +278,7 @@ header {
   padding: 14px 32px;
 }
 /* ----------------bread-crumbs ------------------*/
-.bread-crumbs {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+
 .bread-crumbs.novisible {
   display: none;
 }

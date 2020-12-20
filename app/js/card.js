@@ -58,9 +58,10 @@ xmlHTTP.onload = function (ev) {
     let cardFragment = document.createDocumentFragment();
     let temlateCard = document.querySelector('#cardElement');
     const mainCard = temlateCard.content.cloneNode(true); 
+    mainCard.querySelector('.bread-crumbs__title').textContent = cardElem.name;
     mainCard.querySelector('img').src = cardElem.srcCard;
     mainCard.querySelector('img').alt = cardElem.alt;
-    mainCard.querySelector('.card-optins__title').textContent = cardElem.title;
+    mainCard.querySelector('.card-optins__title').textContent = cardElem.titleOption + ' ' + cardElem.name;
     mainCard.querySelector('.types_title1').textContent = cardElem.typeName;
     mainCard.querySelector('.types_value1').textContent = arrayTypes;
     mainCard.querySelector('.types_title2').textContent = cardElem.sizeName;
@@ -76,8 +77,9 @@ xmlHTTP.onload = function (ev) {
     mainCard.querySelector('.card-options_button').textContent = cardElem.btnAddCard;
     mainCard.querySelector('.btn-take').textContent = cardElem.btnTake;
     cardFragment.appendChild(mainCard);
-    let list = document.querySelector('.card');
+    let list = document.querySelector('.cardTemplate');
     list.appendChild(cardFragment);
+    console.log(cardElem.name);
   }
 
   createCards(cardElem);

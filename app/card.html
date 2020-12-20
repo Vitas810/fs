@@ -80,55 +80,61 @@
                <li>Собачки</li>
                <li>Айну</li>
             </ul>
-            <h1 class="bread-crumbs__title">Айну</h1>
          </div>
       </div>
-      <section class="cards">
-         <div class="container">
-            <div class="card">
-               <template id="cardElement">
-                  <div class="card-item__img">
-                     <img src="assets/image.jpeg" alt="Картинка собаки" />
-                  </div>
-                  <div class="card-options">
-                     <h3 class="card-optins__title"></h3>
-                     <div class="card-optins-items">
-                        <div class="card-optins-item">
-                           <span class="card-optins-item__title types_title1"></span>
-                           <span class="card-optins-item__value types_value1"></span>
-                        </div>
-                        <div class="card-optins-item">
-                           <span class="card-optins-item__title types_title2"></span>
-                           <span class="card-optins-item__value types_value2"></span>
-                        </div>
-                        <div class="card-optins-item">
-                           <span class="card-optins-item__title types_title3"></span>
-                           <span class="card-optins-item__value types_value3"></span>
-                        </div>
-                        <div class="card-optins-item">
-                           <span class="card-optins-item__title types_title4"></span>
-                           <span class="card-optins-item__value types_value4"></span>
-                        </div>
-                        <div class="card-optins-item">
-                           <span class="card-optins-item__title types_title5"></span>
-                           <span class="card-optins-item__value types_value5"></span>
-                        </div>
-                     </div>
-                     <div class="card-options-price">
-                        <span class="card-options-price__title types_title6"></span>
-                        <span class="card-options-price__value types_value6"></span>
-                     </div>
-                     <div class="card-options-buttons">
-                        <button class="button btn-take">Забрать</button>
-                        <button class="button card-options_button">
-                        Добавить в корзину
-                        </button>
-                     </div>
-                  </div>
-               </template>
+      <div class="cardTemplate">
+         <template id="cardElement" >
+            <div class="header-title">
+               <div class="container">
+                  <h1 class="bread-crumbs__title">Айну</h1>
+               </div>
             </div>
-         </div>
-      </section>
+            <section class="cards">
+               <div class="container">
+                  <div class="card">
+                     <div class="card-item__img">
+                        <img src="assets/image.jpeg" alt="Картинка собаки" />
+                     </div>
+                     <div class="card-options">
+                        <h3 class="card-optins__title"></h3>
+                        <div class="card-optins-items">
+                           <div class="card-optins-item">
+                              <span class="card-optins-item__title types_title1"></span>
+                              <span class="card-optins-item__value types_value1"></span>
+                           </div>
+                           <div class="card-optins-item">
+                              <span class="card-optins-item__title types_title2"></span>
+                              <span class="card-optins-item__value types_value2"></span>
+                           </div>
+                           <div class="card-optins-item">
+                              <span class="card-optins-item__title types_title3"></span>
+                              <span class="card-optins-item__value types_value3"></span>
+                           </div>
+                           <div class="card-optins-item">
+                              <span class="card-optins-item__title types_title4"></span>
+                              <span class="card-optins-item__value types_value4"></span>
+                           </div>
+                           <div class="card-optins-item">
+                              <span class="card-optins-item__title types_title5"></span>
+                              <span class="card-optins-item__value types_value5"></span>
+                           </div>
+                        </div>
+                        <div class="card-options-price">
+                           <span class="card-options-price__title types_title6"></span>
+                           <span class="card-options-price__value types_value6"></span>
+                        </div>
+                        <div class="card-options-buttons">
+                           <button class="button btn-take">Забрать</button>
+                           <button class="button card-options_button">
+                           Добавить в корзину
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </template>
+      </div>
       <script src="js/card.js"></script>
    </body>
 </html>
