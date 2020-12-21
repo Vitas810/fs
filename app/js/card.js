@@ -34,7 +34,7 @@ xmlHTTP.onload = function (ev) {
   let arrayFeatures = [];
   let arrayFrequentIllnesses = [];
   let searchId = getUrlId();
-  let cardElem = cardItems.find(city => city.id === searchId)
+  let cardElem = cardItems.find(item => item.id === searchId)
   //console.log('cardElem',cardElem.cardTypes);
 
   cardElem.cardTypes.forEach(id => {
