@@ -80,7 +80,10 @@
   cursor: pointer;
 }
 .basket-item__result {
-  padding: 0 11px;
+  padding-left: 4px;
+  width: calc(100% / 4);
+  background-color: #fff;
+  border: none;
 }
 .basket-item__price {
   font-weight: 600;
@@ -111,7 +114,9 @@
 .basket-btn-do {
   margin: 0 auto;
 }
-
+.btn-plus {
+  margin-left: -20px;
+}
 .basket .basket-clouse {
   position: absolute;
   top: 30px;
