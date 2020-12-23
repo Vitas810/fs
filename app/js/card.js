@@ -1,5 +1,5 @@
-let xmlHTTP = new XMLHttpRequest();
-xmlHTTP.onload = function (ev) {
+let xml = new XMLHttpRequest();
+xml.onload = function (ev) {
   let cardItems = JSON.parse(ev.target.responseText);
 
   function getUrlId(){
@@ -84,5 +84,5 @@ xmlHTTP.onload = function (ev) {
 
   createCards(cardElem);
 };
-xmlHTTP.open('GET', 'http://localhost:3000/api/card.json', true);
-xmlHTTP.send();
+xml.open('GET', 'http://localhost:3000/api/card.json', true);
+xml.send();

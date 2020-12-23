@@ -194,6 +194,12 @@ input:-moz-placeholder {
   width: 18px;
   height: 18px;
 }
+.basket {
+  display: none;
+}
+.basket.visible {
+  display: block;
+}
 .icon {
   width: 32px;
   height: 30px;

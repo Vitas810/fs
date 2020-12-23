@@ -1,5 +1,5 @@
-let xmlHTTP = new XMLHttpRequest();
-xmlHTTP.onload = function (ev) {
+let xmlHttp = new XMLHttpRequest();
+xmlHttp.onload = function (ev) {
 	//console.log(ev.target.responseText);
 	let allItems = JSON.parse(ev.target.responseText);
 
@@ -8,6 +8,12 @@ xmlHTTP.onload = function (ev) {
 	const line = document.querySelector('.line');
 	const breadCrumbs = document.querySelector('.bread-crumbs');
 	const filterCounter = document.querySelector('.filter-counter-elem');
+	const btnBasketOpen = document.querySelector('.open-basket');
+	const basket = document.querySelector('.basket');
+	const btnBasketClouse = document.querySelector('.basket-clouse');
+
+	btnBasketOpen.addEventListener('click', event => basket.classList.toggle('visible'))
+	btnBasketClouse.addEventListener('click', event => basket.classList.toggle('visible'))
 
 	button.addEventListener('click', (el) => {
 		el.preventDefault();
@@ -62,7 +68,6 @@ xmlHTTP.onload = function (ev) {
 				return featuresValues;
 			});
 
-			let count = 0;
 			let findElements = [];
 			allItems.forEach(item => {
 				//console.log('typeValues', typeValues);
@@ -91,6 +96,10 @@ xmlHTTP.onload = function (ev) {
 
 		});
 	}
+
+	
+
+
 };
-xmlHTTP.open('GET', 'http://localhost:3000/api/catalog.json', true);
-xmlHTTP.send();
+xmlHttp.open('GET', 'http://localhost:3000/api/catalog.json', true);
+xmlHttp.send();
