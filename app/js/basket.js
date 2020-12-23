@@ -1,6 +1,39 @@
 xmlHttp = new XMLHttpRequest();
 xmlHttp.onload = function (ev) {
 
+  class CartBasketCount {
+    constructor () {
+    }
+
+    init () {
+      let arrayitemBasket = [];
+      let btnBasket = document.querySelectorAll('.main-items__button');
+
+      for (let btnItem of btnBasket) {
+        btnItem.addEventListener('click', event => {
+        let button = event.target;
+        let shopItem = button.parentElement.parentElement;
+        let price = shopItem.getElementsByClassName('main-items__price')[0].innerText;
+        arrayitemBasket.push(price);
+        addItemToCart()
+        //updateCartTotal()
+          
+        })
+      }
+    function addItemToCart() {
+      let basketCountlElement = document.querySelector('.cart_content');
+      let totalPtice = document.querySelector('.total-price');       
+      let totalSumm = arrayitemBasket.reduce((sum, arg) => parseInt(sum) + (parseInt(arg) || 0))
+      basketCountlElement.innerText = `Корзина (${arrayitemBasket.length})`;
+      totalPtice.innerText = `Сумма (${totalSumm})`;
+    }
+    }
+
+  }
+  let totalBsk = new CartBasketCount();
+  totalBsk.init();
+  
+/* 
 const totalPriceWrapper = document.querySelector('.results_price');
 
 const getItemSubTotalPrice = input => {
@@ -58,37 +91,8 @@ const init = () => {
   });
 
   init();
+ */
 
-
-  let arrayitemBasket = [];
-	let btnBasket = document.querySelectorAll('.main-items__button');
-	for (let btnItem of btnBasket) {
-		btnItem.addEventListener('click', addToCartClicked)
-	}
-
-	function addToCartClicked(event) {
-		let countCart = 0;
-    let button = event.target
-    let shopItem = button.parentElement.parentElement
-    let price = shopItem.getElementsByClassName('main-items__price')[0].innerText
-    addItemToCart(price)
-		//updateCartTotal()
-		
-}
-
-function addItemToCart(price) {
-	let basketCountlElement = document.querySelector('.cart_content');
-	let totalPtice = document.querySelector('.total-price');
-	arrayitemBasket.push(price);
-
-	let totalSumm = arrayitemBasket.reduce((sum, arg) => {
-		return parseInt(sum) + (parseInt(arg) || 0);
-	})
-
-	basketCountlElement.innerText = `Корзина (${arrayitemBasket.length})`;
-	totalPtice.innerText = `Сумма (${totalSumm})`;
-
-}
 
 };
 xmlHttp.open('GET', 'http://localhost:3000/api/catalog.json', true);
