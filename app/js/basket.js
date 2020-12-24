@@ -9,7 +9,7 @@ xmlHttp.onload = function (ev) {
     initBasket () {
       let arrayitemBasket = [];   
       let btnBasket = document.querySelectorAll('.main-items__button');
-
+      console.log('click-btn', btnBasket[0])
       for (let btnItem of btnBasket) {
         btnItem.addEventListener('click', event => {
         let button = event.target;
@@ -18,8 +18,10 @@ xmlHttp.onload = function (ev) {
         let title = shopItem.getElementsByClassName('main-items__title')[0].innerText;
         let imageSrc = shopItem.querySelector('img').src;
         arrayitemBasket.push(price);
+        console.log('click',)
         addItemToCart(title, imageSrc,price)
-        updateCartTotal()     
+        updateCartTotal()   
+          
         })
       }
       function addItemToCart(title,imageSrc,price) {
@@ -82,10 +84,11 @@ xmlHttp.onload = function (ev) {
             updateCartTotal()
             break;
           case 'minus':
-            input.value--;        
+            input.value--;    
+            input.dataset.value = input.value;
+            updateCartTotal()    
             break;
         }
-        console.log(getItemSubTotalPrice(input));
         basketItem.querySelector('.basket-item__price').textContent = getItemSubTotalPrice(input);
       }
       document.querySelector('.basket-items').addEventListener('click', event => {
@@ -106,10 +109,10 @@ xmlHttp.onload = function (ev) {
           );
         }
       });
-
+      
       function updateCartTotal() {
-        let cartItemContainer = document.getElementsByClassName('basket-items')[0]
-        let cartRows = cartItemContainer.getElementsByClassName('basket-item')
+        let cartItemContainer = document.getElementsByClassName('basket-items')[0];
+        let cartRows = cartItemContainer.getElementsByClassName('basket-item');
         let total = 0
         for (let i = 0; i < cartRows.length; i++) {
             let quantity = 0
@@ -117,19 +120,40 @@ xmlHttp.onload = function (ev) {
             let quantityElement = cartRow.getElementsByClassName('basket-item__result')[0];
             let price = quantityElement.dataset.price;
             quantity = quantityElement.dataset.value;
-            console.log('price',price);
             total = total + (price * quantity);
            
         }
         total = Math.round(total * 100) / 100
         document.getElementsByClassName('results_price')[0].innerText = `${total} P`
       } 
+      function deleteItemAll () {
+        document.querySelector('.basket-all__delete').addEventListener('click', event => {
+          let itemDel = document.querySelectorAll('.basket-item');
+				  Object.values(itemDel).map(e => {
+					  e.remove()
+          })
+          updateCartTotal()
+        });
+      }
+      deleteItemAll ();
+
+      function deleteItem () {
+        let btnBasket1 = document.querySelectorAll('.basket-btn-remove');
+        for (let btnItem of btnBasket1) {
+          btnItem.addEventListener('click', event => {
+            let delItem = document.querySelector('.basket-item');
+            delItem.remove()
+            updateCartTotal()
+          })
+        }
+      }
+      deleteItem ();
     }
 
   }
   let totalBsk = new CartBasketCount();
   totalBsk.initBasket();
-  
+
 };
 xmlHttp.open('GET', 'http://localhost:3000/api/catalog.json', true);
 xmlHttp.send();

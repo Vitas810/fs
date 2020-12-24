@@ -1,6 +1,8 @@
+
 let xmlHttp = new XMLHttpRequest();
 xmlHttp.onload = function (ev) {
-	//console.log(ev.target.responseText);
+
+
 	let allItems = JSON.parse(ev.target.responseText);
 
 	const cat = document.querySelector('.catalog-top');
@@ -84,11 +86,12 @@ xmlHttp.onload = function (ev) {
 			})
 			elemCount.innerHTML = 'Найдено ' + findElements.length;
 
+			
 			console.log('findElements', findElements.length);
 			const linkCard = document.querySelector('.filter-show');
 			linkCard.addEventListener('click', event => {
-				let test = document.querySelectorAll('.main-item');
-				Object.values(test).map(e => {
+				let elemDelete = document.querySelectorAll('.main-item');
+				Object.values(elemDelete).map(e => {
 					e.remove()
 				})
 				createItems(findElements)
