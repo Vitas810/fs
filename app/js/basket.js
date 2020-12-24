@@ -9,7 +9,6 @@ xmlHttp.onload = function (ev) {
     initBasket () {
       let arrayitemBasket = [];   
       let btnBasket = document.querySelectorAll('.main-items__button');
-      console.log('click-btn', btnBasket[0])
       for (let btnItem of btnBasket) {
         btnItem.addEventListener('click', event => {
         let button = event.target;
@@ -18,7 +17,6 @@ xmlHttp.onload = function (ev) {
         let title = shopItem.getElementsByClassName('main-items__title')[0].innerText;
         let imageSrc = shopItem.querySelector('img').src;
         arrayitemBasket.push(price);
-        console.log('click',)
         addItemToCart(title, imageSrc,price)
         updateCartTotal()   
           
@@ -136,18 +134,6 @@ xmlHttp.onload = function (ev) {
         });
       }
       deleteItemAll ();
-
-      function deleteItem () {
-        let btnBasket1 = document.querySelectorAll('.basket-btn-remove');
-        for (let btnItem of btnBasket1) {
-          btnItem.addEventListener('click', event => {
-            let delItem = document.querySelector('.basket-item');
-            delItem.remove()
-            updateCartTotal()
-          })
-        }
-      }
-      deleteItem ();
     }
 
   }
