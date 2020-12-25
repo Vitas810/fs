@@ -23,8 +23,6 @@ import { getData } from "./getData.js";
 		breadCrumbs.classList.toggle('novisible');
 	});
 
-	let randomItems = allItems.sort(() => Math.random() - 0.5);
-
 	function createItems(block) {
 		let cardFragment = document.createDocumentFragment();
 		let temlateItems = document.querySelector('#cardProduct');
@@ -41,7 +39,7 @@ import { getData } from "./getData.js";
 		let list = document.querySelector('.main-items');
 		list.appendChild(cardFragment);
 	}
-	createItems(randomItems);
+	createItems(allItems);
 
 	let filterCart = () => {
 			const elementCounterClick = document.querySelectorAll('input[name=type], input[name=features]');
