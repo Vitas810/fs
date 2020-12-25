@@ -1,3 +1,5 @@
+import { ficha } from "./ficha.js";
+
 export function createItems(block) {
 		let cardFragment = document.createDocumentFragment();
 		let temlateItems = document.querySelector('#cardProduct');
@@ -14,3 +16,8 @@ export function createItems(block) {
 		let list = document.querySelector('.main-items');
 		list.appendChild(cardFragment);
 	}
+	//ficha();
+
+				
+								
+                   
