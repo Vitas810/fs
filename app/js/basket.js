@@ -3,7 +3,11 @@
  getData('http://localhost:3000/api/catalog.json').then(data => {
    
   class CartBasketCount {
-    constructor () {}
+    constructor () {
+      this.price = '';
+      this.title = '';
+      this.imageSrc = '';
+    }
 
     initBasket () {
       let arrayitemBasket = [];   
@@ -12,13 +16,12 @@
         btnItem.addEventListener('click', event => {
         let button = event.target;
         let shopItem = button.parentElement.parentElement;
-        let price = shopItem.getElementsByClassName('main-items__price')[0].innerText;
-        let title = shopItem.getElementsByClassName('main-items__title')[0].innerText;
-        let imageSrc = shopItem.querySelector('img').src;
-        arrayitemBasket.push(price);
-        addItemToCart(title, imageSrc,price)
-        updateCartTotal()   
-          
+        this.price = shopItem.getElementsByClassName('main-items__price')[0].innerText;
+        this.title = shopItem.getElementsByClassName('main-items__title')[0].innerText;
+        this.imageSrc = shopItem.querySelector('img').src;
+        arrayitemBasket.push(this.price);
+        addItemToCart(this.title, this.imageSrc,this.price);
+        updateCartTotal();    
         })
       }
       function addItemToCart(title,imageSrc,price) {
