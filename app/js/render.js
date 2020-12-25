@@ -16,6 +16,7 @@ export function createItems(block) {
 		let list = document.querySelector('.main-items');
 		list.appendChild(cardFragment);
 	}
+
 	//ficha();
 
 				

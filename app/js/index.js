@@ -2,7 +2,7 @@ import { getData } from "./getData.js";
 import { createItems } from "./render.js";
 import { filterCart } from "./filter.js";
 
-  getData('http://localhost:3000/api/catalog.json').then(data => {
+getData('http://localhost:3000/api/catalog.json').then(data => {
 	let allItems = data;
 	const cat = document.querySelector('.catalog-top');
 	const button = document.querySelector('.button');
@@ -20,11 +20,11 @@ import { filterCart } from "./filter.js";
 		cat.classList.toggle('visible');
 		line.classList.toggle('novisible');
 		breadCrumbs.classList.toggle('novisible');
-	});
+});
 
 	createItems(allItems);
 	filterCart(allItems);
-
+	
 }).catch(error => {
 	console.error(error);
 })

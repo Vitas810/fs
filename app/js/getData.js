@@ -2,7 +2,6 @@ export  function getData(url) {
   return new Promise(function(resolve, reject) {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
-
     xhr.onload = function() {
       if (this.status < 400) {
         resolve(JSON.parse(this.response));
@@ -12,11 +11,9 @@ export  function getData(url) {
         reject(error);
       }
     };
-
     xhr.onerror = function() {
       reject(new Error("Error"));
     };
-
     xhr.send();
   });
 }
