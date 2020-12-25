@@ -1,9 +1,8 @@
+import { getData } from "./getData.js";
 
-let xmlHttp = new XMLHttpRequest();
-xmlHttp.onload = function (ev) {
-
-
-	let allItems = JSON.parse(ev.target.responseText);
+  getData('http://localhost:3000/api/catalog.json').then(data => {
+   
+	let allItems = data;
 
 	const cat = document.querySelector('.catalog-top');
 	const button = document.querySelector('.button');
@@ -44,7 +43,8 @@ xmlHttp.onload = function (ev) {
 	}
 	createItems(randomItems);
 
-	const elementCounterClick = document.querySelectorAll('input[name=type], input[name=features]');
+	let filterCart = () => {
+			const elementCounterClick = document.querySelectorAll('input[name=type], input[name=features]');
 	const elemCount = document.querySelector('.filter-counters');
 
 	for (let buttonItem of elementCounterClick) {
@@ -94,15 +94,18 @@ xmlHttp.onload = function (ev) {
 				Object.values(elemDelete).map(e => {
 					e.remove()
 				})
+			
 				createItems(findElements)
 			})
 
 		});
 	}
+	}
 
+filterCart()
+}).catch(error => {
+	console.error(error);
+})
 	
 
 
-};
-xmlHttp.open('GET', 'http://localhost:3000/api/catalog.json', true);
-xmlHttp.send();

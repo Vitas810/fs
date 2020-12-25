@@ -1,10 +1,9 @@
-xmlHttp = new XMLHttpRequest();
-xmlHttp.onload = function (ev) {
+ import { getData } from "./getData.js";
 
+ getData('http://localhost:3000/api/catalog.json').then(data => {
+   
   class CartBasketCount {
-    constructor () {
-
-    }
+    constructor () {}
 
     initBasket () {
       let arrayitemBasket = [];   
@@ -140,6 +139,7 @@ xmlHttp.onload = function (ev) {
   let totalBsk = new CartBasketCount();
   totalBsk.initBasket();
 
-};
-xmlHttp.open('GET', 'http://localhost:3000/api/catalog.json', true);
-xmlHttp.send();
+}).catch(error => {
+	console.error(error);
+})
+	
